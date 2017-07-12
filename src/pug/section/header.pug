@@ -1,0 +1,10 @@
+header.header
+
+	a.logo(href="index.html")
+		img(src="img/logo.png")
+
+	nav.menu
+		each val in ['главная', 'о компании', 'услуги', "новости", "о ремонте", "отзывы", "вакансии", "контакты"]
+			a.menu__link(href="")= val
+
+	a.tel.icon.icon-phone(href="tel:336734089") (33) 673 40 89 (мтс)
