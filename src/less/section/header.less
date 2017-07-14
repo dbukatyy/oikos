@@ -1,0 +1,49 @@
+/*====header====*/
+
+.header {
+	.flex();
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+	background: @c-white;
+}
+
+.logo {
+	display: flex;
+	width: 320px;
+	height: 90px;
+
+		img {
+			max-width: 100%;
+			max-height: 100%;
+			margin: auto;
+		}
+}
+
+.menu {
+	.flex();
+	margin: 0 20px;
+
+	&__link {
+		margin: 0 15px;
+		color: @c-black;
+		transition: all .3s;
+		text-transform: uppercase;
+		
+
+		&:hover {
+			color: @c-green;
+		}
+	}
+}
+
+.tel {
+	color: @c-black;
+	transition: all .3s;
+
+		&:hover {
+			color: @c-green;
+		}
+}

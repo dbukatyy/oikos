@@ -3,6 +3,7 @@ body {
   min-height: 100vh;
   flex-direction: column;
   font-size: @base-font;
+  font-family: 'Helvetica';
 }
 
 .main {
@@ -14,4 +15,96 @@ a,
 a:hover,
 a:active {
 	text-decoration: none;
+	transition: all .3s;
 }
+
+/*==== slider ====*/
+
+
+.slider {
+
+	&-wrap {
+		width: 96%;
+		margin: auto;
+	}
+
+	&__item {
+		height: calc(~"100vh - 90px");
+		overflow: hidden;
+		background: #000;
+		position: relative;
+
+			img {
+				width: 10%;
+				height: auto;
+			}
+	}
+
+	&__txt {
+		position: absolute;
+		bottom: 20%;
+		left: 12%;		
+		color: @c-white;
+	}
+	&__title {
+		text-transform: uppercase;
+		margin-bottom: 15px;		
+	}
+
+	&__links {
+		position: absolute;
+		bottom: 40px;
+		left: 20%;
+		right: 20%;
+		z-index: 5;
+		background: rgba(255,255,255,.8);
+		padding: 5px 10px;
+		.flex-sb();	
+	}
+
+	&__contacts{
+		&-link {
+			font-weight: bold;
+			color: @c-green;
+			margin-right: 20px;
+
+			&:hover {
+				color: @c-gray;
+			}
+		}
+	}
+}
+
+.social {
+	span {
+		color: @c-green;
+	}
+
+	&__link {
+		color: @c-gray;
+		border: 1px solid @c-gray;
+		margin: 0 5px;
+		border-radius: 3px;
+
+		&:hover {
+			color: @c-green;
+			border: 1px solid @c-green;
+		}
+	}
+}
+
+.owl-dots {
+	position: absolute;
+	top: 50%;
+	right: 15%;
+	.flex-col();
+}
+
+.owl-dot.active span {
+	background: @c-green !important;
+}
+
+.owl-dot span {
+	background: @c-white !important;	
+}
+

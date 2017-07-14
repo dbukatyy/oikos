@@ -3,5 +3,23 @@ extends layout/main
 block title
 	|Главная - Oikos
 
-block content
-	
+block content	
+	.slider-wrap
+		.slider.owl-carousel.owl-theme
+			.slider__item
+				img(src='img/slider.png')
+				.slider__txt
+					h2.h2.slider__title ultrasaten
+					p.p.slider__subtitle Податливый и экологически чистый материал, <br> является идеальным для отделки детских и лечебных заведений
+					a.btn(href='') в раздел
+			//- .slider__item
+			//- 	img(src='img/slider.png')
+		.slider__links
+			.slider__contacts
+				a.p.slider__contacts-link(href="mailto:dekorbrest@tut.by") Email: dekorbrest@tut.by
+				a.p.slider__contacts-link(href="tel:+375336734089") Тел: +375 (33) 673-40-89
+			.social 
+				span.p Посетите нас:  
+				a.icon.icon-vk.p.social__link(href="vk.ru")
+				a.icon.icon-fb.p.social__link(href="vk.ru")
+				a.icon.icon-odk.p.social__link(href="vk.ru")
