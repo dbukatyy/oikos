@@ -108,3 +108,137 @@ a:active {
 	background: @c-white !important;	
 }
 
+/*==== our plus ====*/
+
+.content {
+	background: url('../img/rings.png')  no-repeat;
+	background-size: 100%;
+}
+
+.plus {
+	padding: 90px 0;
+
+	&__title {
+		text-transform: uppercase;
+		text-align: center;
+		font-weight: bold;
+		margin-bottom: 80px;
+	}
+}
+
+.list {
+	.flex();
+	align-items: flex-start;	
+	padding: 0 20px;			
+
+	&__item {
+		width: 33%;
+		.flex-at();
+		justify-content: space-between;	
+		margin-bottom: 80px;	
+	}
+
+	&__title {
+		color: @c-green;
+		font-weight: bold;
+		margin-bottom: 30px;		
+	}
+
+	&__about {
+		width: 70%;
+		padding-right: 10%;	
+	}
+}
+
+
+/*==== why we ====*/
+
+.slider-plus {
+	position: relative;	
+	padding-bottom: 50px;	
+	&__item {
+		.flex-at();
+		justify-content: space-between;	
+		position: relative;	
+	}
+
+	&__link {
+		position: absolute;	
+		bottom: 50px;	
+		right: 50px;	
+	}	
+
+	&__img {
+		height: 640px;	
+		width: 35%;	
+		overflow: hidden;	
+		text-align: center;	
+		img {
+			width: auto;	
+			height: 100%;	
+		}
+	}
+
+	&__we {
+		width: 30%;
+		align-self: center;	
+		padding: 30px 25px 100px 30px;
+		line-height: 	1.5em;
+		color: @c-white;
+		background: @c-green;
+
+		.h4 {
+			font-weight: bold;	
+			text-transform: uppercase;	
+		}		
+
+		.p {
+			width: 80%;	
+		}	
+
+	}
+	.owl-nav {
+		position: absolute;	
+		bottom: 25%;
+		left: 0;		
+	}
+
+	.owl-prev {
+		background: @c-green !important	;
+		color: @c-green !important	;
+		padding: 20px 40px !important;	
+		text-align: center;
+		&:after {
+			content: '< Назад';
+			display: inline-block;	
+			opacity: 1;		
+			color: @c-white;
+			margin-left: -20px;	
+		}
+	}
+
+	.owl-next {
+		position: relative;	
+		right: -30%;	
+		// margin-right: -50%!important;	
+		background: @c-white !important	;
+		color: @c-white !important;
+		padding: 20px 40px !important;	
+		text-align: center;	
+		&:after {
+			content: 'Дальше >';
+			opacity: 1;
+			color: @c-black;
+			margin-left: -20px;	
+		}
+	}
+
+	&__txt {
+		padding-left: 60px;	
+		width: 35%;	
+
+		.h3 {
+			font-weight: bold;	
+		}
+	}
+}

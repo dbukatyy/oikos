@@ -1,6 +1,6 @@
 jQuery(document).ready(function () {
 
-	$('.owl-carousel').owlCarousel({
+	$('.slider').owlCarousel({
 	    loop:true,
 	    margin:10,
 	    dots:true,
@@ -8,6 +8,19 @@ jQuery(document).ready(function () {
 	    autoplay: true,
 	    animateOut: 'fadeOut'
 	})
+
+
+	$('.slider-plus').owlCarousel({
+	    loop:true,
+	    margin:10,
+	    dots:false,
+	    items:1,
+	    autoplay: true,
+	    animateOut: 'fadeOut',
+	    nav:true
+	})
+
+	
 
 });
 
