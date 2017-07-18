@@ -11,7 +11,7 @@ jQuery(document).ready(function () {
 		animateOut: 'fadeOut'
 	});
 
-	$('.slider-plus').owlCarousel({
+	$('.slider-plus,.news').owlCarousel({
 		loop: true,
 		margin: 10,
 		dots: false,
@@ -19,5 +19,15 @@ jQuery(document).ready(function () {
 		autoplay: true,
 		animateOut: 'fadeOut',
 		nav: true
+	});
+
+	$('.catalog').owlCarousel({
+		loop: true,
+		margin: 10,
+		dots: true,
+		items: 1,
+		autoplay: false,
+		animateOut: 'fadeOut',
+		nav: false
 	});
 });
