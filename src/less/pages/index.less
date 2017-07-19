@@ -499,3 +499,153 @@ a:active {
 		}
 	}	
 }
+
+
+/*====  review ====*/
+.reviews {
+	&__list {
+		margin: 40px 0;
+		.owl-dot  {
+			display: inline-block;
+			vertical-align: middle;
+			background: @c-gray;	
+			border-radius: 0;
+			height: 2px;
+			width: 15%;
+
+			span {
+				display: none !important;
+			}
+		}
+		.owl-dot.active  {
+			height: 4px;
+			background: @c-green;
+			// width: 10%;
+		}
+	}
+}
+
+.review {
+	&__txt {
+		padding: 40px 15px 90px;
+		border: 2px solid @c-green;
+		max-width: 500px;
+		text-align: right;
+		box-shadow: 5px 5px 0 @c-gray;
+		margin-bottom: 40px;
+		min-height: 250px;
+		box-sizing: border-box;
+		position: relative;
+		background: @c-white;
+		.p {
+			margin-bottom: 50px;
+			text-align: left;
+			line-height: 1.5em;
+		}
+
+		.icon {
+			position: absolute;
+			bottom: 60px;
+			right: 30px;
+		}
+
+	}
+
+	&__img {
+		width: 115px;
+		height: 115px;
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 40px;
+		text-align: center;
+		position: relative;
+
+		img {
+			height: 100%;
+			width: auto;
+			position: relative;
+			z-index: 1;
+		}
+		
+		&:after {
+			content: '';
+			display: inline-block;
+			width: 80%;
+			height: 80%;
+			border: 3px solid @c-green;
+			position: absolute;
+			bottom: -10px;
+			right: -10px;
+		}
+
+	}
+
+	&__author {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	&__info {
+		margin-bottom: 60px;
+	}
+
+	&__name {
+		font-weight: bold;
+		margin-top: 0;
+		margin-bottom: 10px;
+	}
+}
+
+
+/*====  contact ====*/
+.contacts {
+	background: @c-green;
+	color: @c-white;
+	padding-top: 90px;
+	padding-bottom: 90px;
+	transform: translateY(50px);
+
+	&__left {
+		padding-left: 90px;
+		position: relative;
+		&:after {
+			content: '';
+			display: inline-block;
+			height: 3px;
+			width: 20%;
+			background: @c-white;
+			position: absolute;
+			bottom: 0;
+			left: 90px;
+		}
+
+		.h2 {
+			text-transform: uppercase;
+			margin-top: 0;
+			margin-bottom: 20px;
+		}
+
+		a {
+			display: inline-block;
+			color: @c-white;
+			margin-top: 20px;
+		}
+	}
+
+	&__right {
+		.h3 {
+			color: @c-white;
+			margin-top: 0;
+			margin-bottom: 30px;
+			display: inline-block;
+		}
+	}
+}
+
+.map {
+	height: 500px;
+	iframe {
+		height: 100%;
+		width: 100%;
+	}
+}

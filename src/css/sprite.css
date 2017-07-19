@@ -8,6 +8,7 @@ Example usage in HTML:
 
 To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
 
+// CSS
 
 
 // HTML
@@ -17,12 +18,23 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 .icon {
   display: inline-block;
 }
- 
 .icon-clock {
   background-image: url(../img/sprite.png);
   background-position: -78px 0px;
   width: 46px;
   height: 44px;
+}
+.icon-coma-w {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -133px;
+  width: 35px;
+  height: 31px;
+}
+.icon-coma {
+  background-image: url(../img/sprite.png);
+  background-position: -55px -133px;
+  width: 35px;
+  height: 31px;
 }
 .icon-ok {
   background-image: url(../img/sprite.png);

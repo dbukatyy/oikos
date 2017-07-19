@@ -396,6 +396,12 @@ template {
   font-style: normal;
 }
 @font-face {
+  font-family: 'Algerian';
+  src: url('../fonts/Algerian.ttf');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
   font-family: 'Helvetica';
   src: url('../fonts/Helvetica Cyrillic Bold.ttf');
   font-weight: bold;
@@ -465,12 +471,19 @@ template {
   z-index: 10;
   background: #fff;
 }
+.header.min {
+  border-bottom: 2px solid #009748;
+}
+.header.min .logo {
+  height: 40px;
+}
 .logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 320px;
   height: 90px;
+  transition: all .5s;
 }
 .logo img {
   max-width: 100%;
@@ -506,6 +519,13 @@ template {
 }
 .tel:hover {
   color: #009748;
+}
+.footer {
+  background: #009748;
+  padding: 10px 0;
+}
+.footer a {
+  color: #fff;
 }
 body {
   display: -webkit-box;
@@ -1003,4 +1023,246 @@ a:active {
   content: '-';
   display: inline-block;
   margin-right: 10px;
+}
+/*====  review ====*/
+.reviews__list {
+  margin: 40px 0;
+}
+.reviews__list .owl-dot {
+  display: inline-block;
+  vertical-align: middle;
+  background: #ccc;
+  border-radius: 0;
+  height: 2px;
+  width: 15%;
+}
+.reviews__list .owl-dot span {
+  display: none !important;
+}
+.reviews__list .owl-dot.active {
+  height: 4px;
+  background: #009748;
+}
+.review__txt {
+  padding: 40px 15px 90px;
+  border: 2px solid #009748;
+  max-width: 500px;
+  text-align: right;
+  box-shadow: 5px 5px 0 #ccc;
+  margin-bottom: 40px;
+  min-height: 250px;
+  box-sizing: border-box;
+  position: relative;
+  background: #fff;
+}
+.review__txt .p {
+  margin-bottom: 50px;
+  text-align: left;
+  line-height: 1.5em;
+}
+.review__txt .icon {
+  position: absolute;
+  bottom: 60px;
+  right: 30px;
+}
+.review__img {
+  width: 115px;
+  height: 115px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 40px;
+  text-align: center;
+  position: relative;
+}
+.review__img img {
+  height: 100%;
+  width: auto;
+  position: relative;
+  z-index: 1;
+}
+.review__img:after {
+  content: '';
+  display: inline-block;
+  width: 80%;
+  height: 80%;
+  border: 3px solid #009748;
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+}
+.review__author {
+  display: inline-block;
+  vertical-align: middle;
+}
+.review__info {
+  margin-bottom: 60px;
+}
+.review__name {
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+/*====  contact ====*/
+.contacts {
+  background: #009748;
+  color: #fff;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+}
+.contacts__left {
+  padding-left: 90px;
+  position: relative;
+}
+.contacts__left:after {
+  content: '';
+  display: inline-block;
+  height: 3px;
+  width: 20%;
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 90px;
+}
+.contacts__left .h2 {
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.contacts__left a {
+  display: inline-block;
+  color: #fff;
+  margin-top: 20px;
+}
+.contacts__right .h3 {
+  color: #fff;
+  margin-top: 0;
+  margin-bottom: 30px;
+  display: inline-block;
+}
+.map {
+  height: 500px;
+}
+.map iframe {
+  height: 100%;
+  width: 100%;
+}
+/*====	category ====*/
+.category {
+  margin-bottom: 50px;
+}
+.category__img {
+  height: 370px;
+  overflow: hidden;
+}
+.category__img img {
+  width: 100%;
+}
+.category__name {
+  border: 3px solid #009748;
+  width: 60%;
+  margin: 80px auto 60px;
+  padding: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+.category__name span {
+  color: #009748;
+}
+.category__title {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.category__title span {
+  color: #009748;
+}
+.category__txt {
+  position: relative;
+}
+.category__txt .p {
+  line-height: 1.3em;
+}
+.category__txt .btn_bordered {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+}
+.category:last-child {
+  margin-bottom: 0;
+}
+.headers_extend {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.jobs {
+  text-align: center;
+}
+.jobs p {
+  text-transform: uppercase;
+}
+.jobs__item {
+  display: inline-block;
+  width: 110px;
+  height: 110px;
+  overflow: hidden;
+  margin: 0 5px;
+  position: relative;
+}
+.jobs__item img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+.content_space {
+  padding-bottom: 100px;
+}
+.product {
+  margin: 40px 0;
+}
+.product__img img {
+  width: 100%;
+}
+.product__title {
+  margin-top: 0;
+  color: #009748;
+  text-decoration: underline;
+}
+.product-header {
+  text-transform: uppercase;
+  margin: 60px 0;
+  font-weight: bold;
+}
+.product-header span {
+  color: #009748;
+}
+.product-name {
+  font-family: 'Algerian';
+  color: #464646;
+  margin: 0;
+}
+.product-name span {
+  color: #009748;
+}
+.product-more {
+  display: block;
+  max-width: 20%;
+  margin: auto;
+  font-style: italic;
+  color: #464646;
+  text-decoration: underline;
+}
+.headers_space {
+  margin: 40px 0 60px;
 }

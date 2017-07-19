@@ -8,12 +8,21 @@
 	right: 0;
 	z-index: 10;
 	background: @c-white;
+
+
+	&.min {
+		border-bottom: 2px solid @c-green;
+		.logo {
+			height: 40px;
+		}
+	}
 }
 
 .logo {
 	display: flex;
 	width: 320px;
 	height: 90px;
+	transition: all .5s;
 
 		img {
 			max-width: 100%;
