@@ -53,6 +53,10 @@ jQuery(document).ready(function () {
 	 
 			
 	});
+
+	$('.hamburger').on('click', e => {
+		$('.hamburger, .menu').toggleClass('active');
+	})
 	
 
 });

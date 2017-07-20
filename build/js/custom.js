@@ -51,4 +51,8 @@ jQuery(document).ready(function () {
 
 		$('.content').css('background-position', '50% ' + scroll / 40 + '%');
 	});
+
+	$('.hamburger').on('click', function (e) {
+		$('.hamburger, .menu').toggleClass('active');
+	});
 });
