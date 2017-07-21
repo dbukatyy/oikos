@@ -1,0 +1,49 @@
+.designers-slider {
+	.owl-dot  {
+		display: inline-block;
+		vertical-align: middle;
+		background: @c-gray;	
+		border-radius: 0;
+		height: 2px;
+		width: 15%;
+
+		span {
+			display: none !important;
+		}
+	}
+	.owl-dot.active  {
+		height: 4px;
+		background: @c-green;
+		// width: 10%;
+	}
+
+	&__item {
+		display: inline-block;
+		position: relative;
+		height: 270px;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		img {
+			position: absolute;
+			width: auto !important;
+			height: 100%;
+
+		}
+	}
+}
+
+.designers-title {
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: normal;
+}
+
+.designer {
+	margin-bottom: 50px;
+
+	&__img {
+		text-align: center;
+	}
+}

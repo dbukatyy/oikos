@@ -35,13 +35,40 @@ jQuery(document).ready(function () {
 		loop: true,
 		margin: 10,
 		dots: true,
-		items: 2,
 		autoplay: false,
 		animateOut: 'fadeOut',
-		nav: false
+		nav: false,
+		responsive: {
+			0: {
+				items: 1
+			},
+			768: {
+				items: 2
+			}
+		}
 	});
 
-	baguetteBox.run('.jobs__list');
+	$('.designers-slider').owlCarousel({
+		loop: true,
+		margin: 10,
+		dots: true,
+		autoplay: false,
+		animateOut: 'fadeOut',
+		nav: false,
+		responsive: {
+			0: {
+				items: 1
+			},
+			768: {
+				items: 3
+			},
+			992: {
+				items: 4
+			}
+		}
+	});
+
+	baguetteBox.run('.jobs__list,.designers-slider');
 
 	$(document).on('scroll', function (e) {
 		var scroll = $(e.target).scrollTop(),
@@ -54,5 +81,14 @@ jQuery(document).ready(function () {
 
 	$('.hamburger').on('click', function (e) {
 		$('.hamburger, .menu').toggleClass('active');
+	});
+
+	$('.slide-link').on('click', function (e) {
+		e.preventDefault();
+		var id = $(e.currentTarget).attr('href');
+
+		$('body').animate({
+			scrollTop: $('' + id).offset().top - 100
+		}, 500);
 	});
 });

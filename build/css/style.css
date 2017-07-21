@@ -445,11 +445,8 @@ template {
   border: 2px solid #009748;
   transition: all .3s;
 }
-.btn_shadow {
+.btn_bordered:hover {
   box-shadow: 5px 5px 0 rgba(0, 151, 72, 0.4);
-}
-.btn_shadow:hover {
-  box-shadow: 5px 5px 0 rgba(0, 151, 72, 0);
 }
 /*====header====*/
 .header {
@@ -1252,6 +1249,7 @@ a:active {
 }
 .category__txt {
   position: relative;
+  padding-bottom: 80px;
 }
 .category__txt .p {
   line-height: 1.3em;
@@ -1436,6 +1434,10 @@ a:active {
     width: 49%;
     height: 225px;
   }
+  .jobs__item {
+    width: 100px;
+    height: 100px;
+  }
 }
 @media all and (max-width: 992px) {
   .menu {
@@ -1483,6 +1485,10 @@ a:active {
   .sale {
     top: 10px;
   }
+  .jobs__item {
+    width: 59px;
+    height: 59px;
+  }
 }
 @media all and (max-width: 768px) {
   .list__item {
@@ -1524,6 +1530,59 @@ a:active {
   .news .owl-next {
     bottom: 0;
   }
+  .repairs__img {
+    height: 300px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .repairs__img img {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+  }
+  .contacts__left {
+    padding-left: 10px;
+    padding-bottom: 50px;
+  }
+  .contacts {
+    padding: 15px;
+  }
+  .service {
+    margin-bottom: 60px;
+  }
+  .service__media {
+    margin-bottom: 20px;
+  }
+  .slider__links {
+    left: 5%;
+    right: 5%;
+  }
+  .headers_extend {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .headers__inner {
+    width: 100%;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    box-sizing: border-box;
+  }
+  .jobs {
+    width: 100%;
+  }
+  .category__img {
+    height: 270px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .category__img img {
+    width: auto;
+    height: 100%;
+  }
+  .product-more {
+    max-width: 50%;
+    text-align: center;
+  }
 }
 @media all and (max-width: 600px) {
   .logo {
@@ -1540,6 +1599,21 @@ a:active {
   }
   .sale__img {
     width: 50%;
+  }
+  .slider__txt {
+    left: 4%;
+  }
+  .h1 {
+    font-size: 2.7rem;
+  }
+  .h2 {
+    font-size: 2.5rem;
+  }
+  .slider .owl-dots {
+    right: 2%;
+  }
+  .h4 {
+    font-size: 1.3rem;
   }
 }
 @media all and (max-width: 460px) {
@@ -1580,4 +1654,62 @@ a:active {
   .sale__img {
     width: 100%;
   }
+  .slider__links {
+    left: 5%;
+    right: 5%;
+    bottom: 10px;
+  }
+  .slider__contacts-link {
+    display: inline-block;
+    width: 100%;
+  }
+  .jobs__item {
+    width: 45px;
+  }
+}
+.designers-slider .owl-dot {
+  display: inline-block;
+  vertical-align: middle;
+  background: #ccc;
+  border-radius: 0;
+  height: 2px;
+  width: 15%;
+}
+.designers-slider .owl-dot span {
+  display: none !important;
+}
+.designers-slider .owl-dot.active {
+  height: 4px;
+  background: #009748;
+}
+.designers-slider__item {
+  display: inline-block;
+  position: relative;
+  height: 270px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.designers-slider__item img {
+  position: absolute;
+  width: auto !important;
+  height: 100%;
+}
+.designers-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+.designer {
+  margin-bottom: 50px;
+}
+.designer__img {
+  text-align: center;
 }

@@ -4,8 +4,14 @@ header.header
 		img(src="img/logo.png")
 
 	nav.menu
-		each val in ['главная', 'о компании', 'услуги', "новости", "о ремонте", "отзывы", "вакансии", "контакты"]
-			a.menu__link.p(href="")= val
+		a.menu__link.p(href="index.html") главная
+		a.menu__link.p.slide-link(href="#about-us") о компании
+		a.menu__link.p.slide-link(href="#services") услуги
+		a.menu__link.p.slide-link(href="#news") новости
+		a.menu__link.p.slide-link(href="#repairs") о ремонте
+		a.menu__link.p.slide-link(href="#reviews") отзывы
+		a.menu__link.p(href="") вакансии
+		a.menu__link.p.slide-link(href="#contact") контакты
 
 	a.tel.icon.icon-phone.p(href="tel:336734089") (33) 673 40 89 (мтс)
 	
