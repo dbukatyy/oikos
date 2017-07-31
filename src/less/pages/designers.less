@@ -47,3 +47,43 @@
 		text-align: center;
 	}
 }
+
+.form {
+	width: 20%;
+	.flex();	
+	&__wrapp {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		.flex();
+		background: rgba(255,255,255,.9);
+		z-index: 20;
+		opacity: 0;
+		pointer-events: none;
+		transition: all .3s;
+
+		&.active {
+			opacity: 1;
+			pointer-events: auto;
+		}
+	}
+
+	&__item {
+		margin: 10px 0;
+		width: 100%;
+		padding: 20px 35px;
+		text-transform: uppercase;	
+		display: inline-block;	
+		color: @c-black;	
+		border: 2px solid @c-green;
+		transition: all .3s;
+		background: @c-white;
+
+		&:active,
+		&:focus {
+			outline: 1px solid @c-green;
+		}
+	}
+}

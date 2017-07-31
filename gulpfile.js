@@ -105,7 +105,7 @@ gulp.task('fonts', function () {
 gulp.task('pug', function buildHTML() {
   return gulp.src(path.src.pug)
   .pipe(pug({
-    // Your options in here. 
+    pretty: true
   }))
   .pipe(gulp.dest(path.build.html)) //Выплюнем их в папку build
   .pipe(notify('html save ok'))

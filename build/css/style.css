@@ -444,6 +444,8 @@ template {
   color: #000;
   border: 2px solid #009748;
   transition: all .3s;
+  background: #fff;
+  cursor: pointer;
 }
 .btn_bordered:hover {
   box-shadow: 5px 5px 0 rgba(0, 151, 72, 0.4);
@@ -924,6 +926,7 @@ a:active {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50%;
+  height: 400px;
 }
 .catalog__left {
   width: 30%;
@@ -1333,6 +1336,27 @@ a:active {
   color: #464646;
   text-decoration: underline;
 }
+.product__about img {
+  max-width: 100%;
+}
+.product__about .col-sm-4 {
+  text-align: center;
+}
+.product__list .owl-dot {
+  display: inline-block;
+  vertical-align: middle;
+  background: #ccc;
+  border-radius: 0;
+  height: 2px;
+  width: 15%;
+}
+.product__list .owl-dot span {
+  display: none !important;
+}
+.product__list .owl-dot.active {
+  height: 4px;
+  background: #009748;
+}
 .headers_space {
   margin: 40px 0 60px;
 }
@@ -1388,12 +1412,117 @@ a:active {
   width: 100%;
   height: auto;
 }
+.designers-slider .owl-dot {
+  display: inline-block;
+  vertical-align: middle;
+  background: #ccc;
+  border-radius: 0;
+  height: 2px;
+  width: 15%;
+}
+.designers-slider .owl-dot span {
+  display: none !important;
+}
+.designers-slider .owl-dot.active {
+  height: 4px;
+  background: #009748;
+}
+.designers-slider__item {
+  display: inline-block;
+  position: relative;
+  height: 270px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.designers-slider__item img {
+  position: absolute;
+  width: auto !important;
+  height: 100%;
+}
+.designers-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+.designer {
+  margin-bottom: 50px;
+}
+.designer__img {
+  text-align: center;
+}
+.form {
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.form__wrapp {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(255, 255, 255, 0.9);
+  z-index: 20;
+  opacity: 0;
+  pointer-events: none;
+  transition: all .3s;
+}
+.form__wrapp.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+.form__item {
+  margin: 10px 0;
+  width: 100%;
+  padding: 20px 35px;
+  text-transform: uppercase;
+  display: inline-block;
+  color: #000;
+  border: 2px solid #009748;
+  transition: all .3s;
+  background: #fff;
+}
+.form__item:active,
+.form__item:focus {
+  outline: 1px solid #009748;
+}
 @media all and (max-width: 1400px) {
   .logo {
     width: 170px;
   }
   .menu__link {
     margin: 0 10px;
+  }
+  .form {
+    width: 400px;
   }
 }
 @media all and (max-width: 1200px) {
@@ -1666,50 +1795,7 @@ a:active {
   .jobs__item {
     width: 45px;
   }
-}
-.designers-slider .owl-dot {
-  display: inline-block;
-  vertical-align: middle;
-  background: #ccc;
-  border-radius: 0;
-  height: 2px;
-  width: 15%;
-}
-.designers-slider .owl-dot span {
-  display: none !important;
-}
-.designers-slider .owl-dot.active {
-  height: 4px;
-  background: #009748;
-}
-.designers-slider__item {
-  display: inline-block;
-  position: relative;
-  height: 270px;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-.designers-slider__item img {
-  position: absolute;
-  width: auto !important;
-  height: 100%;
-}
-.designers-title {
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: normal;
-}
-.designer {
-  margin-bottom: 50px;
-}
-.designer__img {
-  text-align: center;
+  .form {
+    width: 300px;
+  }
 }

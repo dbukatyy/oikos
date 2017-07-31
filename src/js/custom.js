@@ -20,7 +20,7 @@ jQuery(document).ready(function () {
 	    nav:true
 	})
 
-	$('.catalog').owlCarousel({
+	$('.product__list').owlCarousel({
 	    loop:true,
 	    margin:10,
 	    dots: true,
@@ -47,7 +47,7 @@ jQuery(document).ready(function () {
 		}
 	})
 
-	$('.designers-slider').owlCarousel({
+	$('.catalog,.designers-slider').owlCarousel({
 	    loop:true,
 	    margin:10,
 	    dots: true,
@@ -67,7 +67,7 @@ jQuery(document).ready(function () {
 		}
 	})
 
-	baguetteBox.run('.jobs__list,.designers-slider');
+	baguetteBox.run('.jobs__list,.gallery,.product__list');
 
 
 	$(document).on('scroll', e => {
@@ -93,6 +93,23 @@ jQuery(document).ready(function () {
 			scrollTop: $(`${id}`).offset().top - 100
 		},500) 
 	})
+
+	$('.designer__text .btn_bordered').on('click', e => {
+		e.preventDefault();
+
+		$('.form__wrapp').addClass('active');
+	});
+
+	$('.form__wrapp').on('click', e => {
+		
+		const isNoForm = $(e.target).hasClass('form__wrapp');
+
+		if(isNoForm) {
+
+			$(e.currentTarget).removeClass('active');
+		}
+
+	});
 
 });
 

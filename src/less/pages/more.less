@@ -39,6 +39,36 @@
 		color: @c-dgray;
 		text-decoration: underline;	
 	}
+
+	&__about {
+		img {
+			max-width: 100%;
+		}
+
+		.col-sm-4 {
+			text-align: center;
+		}
+	}
+
+	&__list {
+		.owl-dot  {
+		display: inline-block;
+		vertical-align: middle;
+		background: @c-gray;	
+		border-radius: 0;
+		height: 2px;
+		width: 15%;
+
+		span {
+			display: none !important;
+		}
+	}
+	.owl-dot.active  {
+		height: 4px;
+		background: @c-green;
+		// width: 10%;
+	}
+	}
 }
 
 .headers_space {
